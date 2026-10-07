@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aakash Academy — Master AI Video & Image Prompts Hub</title>
+    <meta name="description" content="Official Aakash Academy Library for Viral AI Video Prompts. 100% Free full master prompts with scene breakdowns, camera specs, and negative prompts for Kling AI, Seedance 2.0, Veo 2, Midjourney v6 & Runway.">
+    
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Ambient Lighting Background -->
+    <div class="glow-bg glow-1"></div>
+    <div class="glow-bg glow-2"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-inner">
+            <a href="#" class="brand-logo">
+                <div class="logo-mark">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </div>
+                <div class="logo-text-group">
+                    <span class="brand-title">AAKASH ACADEMY</span>
+                    <span class="brand-subtitle">VIRAL AI PROMPTS HUB</span>
+                </div>
+            </a>
+
+            <nav class="main-nav">
+                <a href="#featured" class="nav-link active">Featured</a>
+                <a href="#browse" class="nav-link">All Prompts</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#saved" class="nav-link" id="nav-fav-link">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    Saved (<span id="fav-count">0</span>)
+                </a>
+            </nav>
+
+            <div class="nav-right">
+                <span class="badge-free">⚡ 100% UNLOCKED & FREE</span>
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="pill-announcement">
+                <span class="live-indicator"></span>
+                <span>OFFICIAL AAKASH ACADEMY MASTER PROMPT REPOSITORY</span>
+            </div>
+            <h1 class="hero-heading">
+                Master AI Video Prompts <br><span class="gradient-text">Complete & Unlocked</span>
+            </h1>
+            <p class="hero-description">
+                Access 380+ complete master AI prompts with shot breakdown, camera angles, timing specs, and negative prompts for Kling AI 1.5, Seedance 2.0, Google Veo 2, Runway & Midjourney.
+            </p>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="search-input" placeholder="Search prompts by title, category, or keyword..." autocomplete="off">
+                    <button id="clear-search-btn" class="clear-btn" style="display:none;">✕</button>
+                </div>
+            </div>
+
+            <!-- Stats Ribbon -->
+            <div class="stats-ribbon">
+                <div class="stat-box">
+                    <span class="stat-value" id="stat-total-prompts">389</span>
+                    <span class="stat-label">Master Prompts</span>
+                </div>
+                <div class="stat-separator"></div>
+                <div class="stat-box">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Free Access</span>
+                </div>
+                <div class="stat-separator"></div>
+                <div class="stat-box">
+                    <span class="stat-value">8K UHD</span>
+                    <span class="stat-label">Quality Render</span>
+                </div>
+                <div class="stat-separator"></div>
+                <div class="stat-box">
+                    <span class="stat-value">Weekly</span>
+                    <span class="stat-label">Prompt Drops</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Carousel -->
+    <section class="carousel-section" id="featured">
+        <div class="container section-title-row">
+            <div>
+                <span class="section-tag">TRENDING ENGINES</span>
+                <h2 class="section-title">Featured Master Prompts</h2>
+            </div>
+        </div>
+        <div class="marquee-container">
+            <div class="marquee-track" id="marquee-track">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="container filter-container" id="categories">
+        <div class="filter-header">
+            <div>
+                <span class="section-tag">BROWSE LIBRARY</span>
+                <h2 class="section-title">Prompt Collections</h2>
+            </div>
+            <div class="sort-wrapper">
+                <select id="sort-select" class="select-input">
+                    <option value="default">Sort by: Newest First</option>
+                    <option value="popular">Most Viewed 🔥</option>
+                    <option value="name">Title A–Z</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="category-pills" id="category-pills">
+            <button class="pill active" data-cat="ALL">✨ All Prompts (<span id="all-count">0</span>)</button>
+            <button class="pill" data-cat="FAVORITES">❤️ Saved Prompts (<span id="pill-fav-count">0</span>)</button>
+            <button class="pill" data-cat="Featured">⭐ Featured</button>
+            <button class="pill" data-cat="Animal & Pets">🐶 Animal & Pets</button>
+            <button class="pill" data-cat="Art & Animation">🎨 Art & Animation</button>
+            <button class="pill" data-cat="ASMR & Satisfying">✨ ASMR & Satisfying</button>
+            <button class="pill" data-cat="Comedy & Entertainment">😂 Comedy & Entertainment</button>
+            <button class="pill" data-cat="DIY & Crafts">🛠️ DIY & Crafts</button>
+            <button class="pill" data-cat="Emotional & Inspirational">❤️ Emotional & Inspirational</button>
+            <button class="pill" data-cat="Fantasy & Sci-Fi">🔮 Fantasy & Sci-Fi</button>
+            <button class="pill" data-cat="Nature & Wildlife">🦁 Nature & Wildlife</button>
+            <button class="pill" data-cat="Sports & Action">⚡ Sports & Action</button>
+            <button class="pill" data-cat="Historical & Nostalgia">📜 Historical & Nostalgia</button>
+        </div>
+    </section>
+
+    <!-- Prompts Grid -->
+    <main class="container grid-container" id="browse">
+        <div class="prompts-grid" id="prompts-grid">
+            <!-- Dynamically populated prompt cards -->
+        </div>
+
+        <!-- No Results Empty State -->
+        <div class="empty-state" id="no-results" style="display: none;">
+            <div class="empty-icon">🔎</div>
+            <h3>No prompts match your search query</h3>
+            <p>Try searching for different keywords or clear the active category filter.</p>
+            <button class="btn-primary" onclick="resetFilters()">Reset All Filters</button>
+        </div>
+    </main>
+
+    <!-- Master Prompt Modal Dialog -->
+    <div class="modal-overlay" id="prompt-modal">
+        <div class="modal-dialog">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+
+            <div class="modal-content-layout">
+                <!-- Left Preview Column -->
+                <div class="modal-left">
+                    <div class="modal-image-wrapper">
+                        <img id="modal-image" src="" alt="Master Prompt Visual Preview">
+                        <span class="modal-badge-free">⚡ 100% UNLOCKED FULL PROMPT</span>
+                    </div>
+
+                    <div class="modal-meta-card">
+                        <div class="meta-row">
+                            <span class="meta-label">Category:</span>
+                            <span class="meta-value highlight" id="modal-cat">General AI</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-label">Views & Likes:</span>
+                            <span class="meta-value" id="modal-stats">👁️ 1.2k | ❤️ 340</span>
+                        </div>
+                        <button class="bookmark-btn" id="modal-fav-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            Save to Favorites
+                        </button>
+                    </div>
+
+                    <div class="ai-tools-group">
+                        <span class="tools-heading">Recommended AI Generators:</span>
+                        <div class="tools-chips">
+                            <span class="tool-chip">Kling AI 1.5</span>
+                            <span class="tool-chip">Seedance 2.0</span>
+                            <span class="tool-chip">Google Veo 2</span>
+                            <span class="tool-chip">Luma Dream Machine</span>
+                            <span class="tool-chip">Midjourney v6</span>
+                            <span class="tool-chip">Runway Gen-3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Master Prompt Text Column -->
+                <div class="modal-right">
+                    <h2 class="modal-prompt-title" id="modal-title">Master Prompt Title</h2>
+                    
+                    <div class="prompt-box-header">
+                        <span>📜 COMPLETE MASTER PROMPT SYSTEM</span>
+                        <button class="btn-copy" id="modal-copy-btn">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            <span>Copy Master Prompt</span>
+                        </button>
+                    </div>
+
+                    <div class="prompt-code-container">
+                        <pre id="modal-prompt-text">Loading prompt content...</pre>
+                    </div>
+
+                    <div class="modal-actions-bar">
+                        <button class="btn-secondary" id="modal-share-btn">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                            Share Link
+                        </button>
+                        <button class="btn-primary" id="modal-copy-btn-2">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Copy Full Prompt Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Banner -->
+    <div class="toast" id="toast">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span id="toast-message">Master Prompt Copied to Clipboard!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col-brand">
+                <div class="brand-logo">
+                    <div class="logo-mark">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <span class="brand-title">AAKASH ACADEMY</span>
+                </div>
+                <p class="footer-tagline">
+                    The Official Open-Access Master AI Prompt Hub for Short-Form Video Creators, Animators, and Prompt Engineers. 100% Free Access.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Navigation</h4>
+                <ul>
+                    <li><a href="#featured">Featured Prompts</a></li>
+                    <li><a href="#browse">All Master Prompts</a></li>
+                    <li><a href="#categories">Browse Categories</a></li>
+                    <li><a href="#saved">Saved Favorites</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>AI Engine Support</h4>
+                <ul>
+                    <li>Kling AI 1.5</li>
+                    <li>Seedance 2.0</li>
+                    <li>Google Veo 2</li>
+                    <li>Midjourney v6</li>
+                    <li>Luma Dream Machine</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Aakash Academy. Open AI Video Prompt Repository.</p>
+            <button class="top-btn" id="scroll-top-btn">↑ Back to Top</button>
+        </div>
+    </footer>
+
+    <!-- Load Prompts Data Dataset -->
+    <script src="prompts_data.js"></script>
+
+    <!-- Main Frontend Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
